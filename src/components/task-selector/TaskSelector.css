@@ -1,0 +1,131 @@
+.task-selector {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(137, 43, 226, 0.199); */
+  align-self: stretch;
+  max-width: 300px;
+  min-width: 250px;
+  height: 100vh;
+  background-color: rgb(36, 37, 38);
+  box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.task-selector-inner {
+  /* display: flex;
+  flex-direction: column; */
+  /* background-color: rgb(36, 37, 38); */
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.task-menu-name {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(114, 195, 219, 0.185); */
+  cursor: pointer;
+  font-size: 17px;
+  padding: 3px;
+}
+
+.task-menu-children {
+  display: flex;
+  flex-direction: column;
+  /* margin: 5px; */
+  margin-left: 10px;
+  /* background-color: rgba(95, 158, 160, 0.459); */
+}
+
+.task-menu-children.collapsed {
+  display: none;
+}
+
+.task-menu-item {
+  display: flex;
+  margin: 1px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.itemImage2 {
+  margin-right: 5px;
+}
+
+.task-menu-item-name {
+}
+
+.task-menu-item-level {
+  margin-right: 5px;
+  font-size: 80%;
+  color: rgb(105, 105, 105);
+}
+
+.search-container {
+  /* display: flex; */
+  /* background-color: rgb(105, 83, 75); */
+  /* justify-content: space-between; */
+  padding: 5px;
+}
+
+.task-selector-search-box {
+  display: flex;
+}
+
+.search-box-form {
+  color: rgb(245, 246, 247);
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  padding: 4px;
+  background-color: rgb(36, 37, 38);
+  /* box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.4); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  /* margin-bottom: 1px; */
+  box-shadow: inset 0 0px 4px 0 rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(255, 127, 80, 0.432); */
+}
+
+.task-selector-amount {
+  background-color: blueviolet;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.task-selector-title {
+  align-self: center;
+}
+
+.checkbox-ahh {
+  position: absolute;
+  align-self: flex-end;
+  margin: 2px;
+}
+
+.form {
+  max-width: 45px;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  color: rgb(245, 246, 247);
+  box-shadow: 0px 0px 2px 0px rgb(0, 0, 0, 0.8);
+  /* box-shadow: inset 0 0px 2px 0 rgba(0, 0, 0, 0.4); */
+  background-color: #323335;
+  /* border: 1px solid rgba(0, 0, 0, 0.37); */
+  border-radius: 3px;
+  padding: 1px 2px 1px 2px;
+  margin: 1px;
+  margin-right: 5px; /* todo very hacky maybe remove and do properly */
+
+}

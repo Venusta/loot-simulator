@@ -1,0 +1,90 @@
+.bank-window {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.bank-inner {
+  display: flex;
+  box-sizing: border-box;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+.bank-wrapper {
+  /* align-self: flex-start; */
+  display: grid;
+  grid-template-columns: repeat(8, 36px);
+  row-gap: 2px;
+  column-gap: 15px;
+  user-select: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.itemInBank {
+  /* cursor: move; */
+}
+
+.itemInBank:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+.itemImage-placeholder {
+  opacity: 30%;
+}
+
+.itemImage {
+  /* TODO extract */
+  margin-top: 7px;
+  pointer-events: none;
+}
+
+.itemAmountTag {
+  /* TODO extract */
+  pointer-events: none;
+  position: absolute;
+}
+
+.item {
+  /* TODO extract */
+  list-style: none;
+  margin-left: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 0px;
+  padding: 0px;
+  position: relative;
+  user-select: none;
+  /* cursor: move; */
+}
+
+.yellow {
+  color: rgb(224, 224, 77);
+  /* color: #fefe00 */
+}
+
+.green {
+  color: #53ff7a;
+}
+
+.cyan {
+  color: rgb(71, 216, 216);
+}
+
+.orange {
+  color: #f79700;
+  /* color: rgb(238, 171, 45); */
+}
+
+.pink {
+  /* color: rgb(224, 92, 165); */
+  color: #ff8fd3;
+}
+
+.white {
+  color: rgb(245, 246, 247);
+}

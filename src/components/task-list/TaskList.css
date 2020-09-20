@@ -1,0 +1,60 @@
+.task-list-window {
+  box-sizing: border-box;
+  box-shadow: 0 0px 8px 0 rgb(0, 0, 0);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: brown; */
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+}
+
+.task-list-title {
+  /* font-size: large;
+  font-weight: bold;
+  background-color: rgb(33, 33, 33);
+  box-shadow: inset 0 0px 8px 0 rgba(0, 0, 0, 0.4);
+  padding: 3px 10px 3px 10px;
+  display: flex;
+  justify-content: center; */
+}
+
+.task-list-inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100px;
+  /* height: 100%;
+  width: 100%; */
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.task-list-item {
+  /* background-color: rgb(16, 122, 183); */
+  /* background-color: rgb(60, 60, 60);
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  box-shadow: 0 0px 4px 0 rgb(0, 0, 0, 0.85); */
+}
+
+.task-list-active {
+  /* background-color: rgba(16, 183, 113, 0.8); */
+  background-color: rgb(20, 153, 98);
+
+}
+
+.task-list-item:hover {
+  background-color: rgba(16, 172, 183);
+}

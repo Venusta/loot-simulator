@@ -1,0 +1,107 @@
+.bank-title {
+  font-size: large;
+  font-weight: bold;
+  background-color: rgba(65, 67, 69);
+  padding: 3px 10px 3px 10px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.bank-window {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.85);
+  /* background-color: rgba(36, 37, 38, 0.8); */
+  /* background-color:rgba(255, 255, 255, 0.048); */
+  /* background-color:rgb(46, 48, 51); */
+  background-color: rgb(36, 37, 38);
+  /* background-color:rgb(85, 87, 89); */
+}
+
+.bank-inner {
+  /* background-color: rgba(36, 37, 38, 0.8); */
+
+  flex: 1;
+  overflow-y: scroll;
+  /* background-color: #53ff7b70; */
+}
+
+.bank-wrapper {
+  align-self: flex-start;
+  display: grid;
+  /* 36px */
+  grid-template-columns: repeat(8, 1fr);
+  row-gap: 2px;
+  column-gap: 15px;
+  user-select: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  /* background-color: #ff8fd26e; */
+}
+
+.itemInBank {
+  /* cursor: move; */
+  /* background-color: rgba(66, 54, 49, 0.74); */
+}
+
+.itemInBank:hover {
+  background-color: rgb(65, 65, 65);
+}
+
+.itemImage-placeholder {
+  opacity: 30%;
+}
+
+.itemImage {
+  /* TODO extract */
+  margin-top: 8px;
+  pointer-events: none;
+}
+
+.itemAmountTag {
+  /* TODO extract */
+  pointer-events: none;
+  position: absolute;
+}
+
+.item {
+  /* TODO extract */
+  list-style: none;
+  margin-left: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-top: 0px;
+  padding: 0px;
+  position: relative;
+  user-select: none;
+  /* cursor: move; */
+}
+
+.yellow {
+  color: rgb(224, 224, 77);
+}
+
+.green {
+  color: #53ff7a;
+}
+
+.cyan {
+  color: rgb(71, 216, 216);
+}
+
+.orange {
+  color: #f79700;
+}
+
+.pink {
+  color: #ff8fd3;
+}
+
+.white {
+  color: rgb(245, 246, 247);
+}
