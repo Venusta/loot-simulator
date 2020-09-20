@@ -23,6 +23,7 @@ const ItemImage = ({ itemID }: ItemImageProps): JSX.Element => {
       className="itemImage"
       width="36"
       height="32"
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       src={`${process.env.PUBLIC_URL}/images/${itemID}.png`}
       onError={(e) => handleError(e)}
     />

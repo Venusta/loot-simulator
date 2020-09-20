@@ -2,15 +2,14 @@
 /* eslint-disable import/prefer-default-export */
 import { createSlice } from "@reduxjs/toolkit";
 import { charactersInitialState } from "../../builders/CharacterBuilder";
-import { addBankToBank, expToLevel } from "../../util";
-import { ItemData, ExpReward } from "../../types/types";
+import { addBankToBank } from "../../util";
+import { ItemData } from "../../types/types";
 
 interface RewardPayload {
   payload: {
     characterId: string;
     reward: {
       items: ItemData[];
-      exp: ExpReward[];
     };
   };
 }
@@ -27,16 +26,8 @@ export const characterSlice = createSlice({
   initialState: charactersInitialState({}),
   reducers: {
     addReward: (state, { payload: { characterId, reward } }: RewardPayload) => {
-      const skills = state.skills[characterId];
       const bank = state.banks[characterId];
-      const { exp, items } = reward;
-      if (exp.length > 0) {
-        exp.forEach((expReward) => {
-          const { skill, amount } = expReward;
-          skills[skill].exp += amount;
-          skills[skill].level = expToLevel(skills[skill].exp);
-        });
-      }
+      const { items } = reward;
 
       if (items.length > 0) {
         state.banks[characterId] = addBankToBank(bank, items);

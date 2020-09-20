@@ -3,7 +3,7 @@ import React from "react";
 import "./LootWindow.css";
 import { v1 as uuid } from "uuid";
 import { ItemData } from "../../types/types";
-import { ItemInBank } from "./Item";
+import { ItemInBank } from "../Item/Item";
 import { formatStackNumbers } from "../../util";
 
 interface BankProps {

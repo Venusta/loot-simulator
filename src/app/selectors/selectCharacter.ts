@@ -1,7 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { selectName } from "./selectName";
-import { selectSkills } from "./selectSkills";
-import { selectEquipment } from "./selectEquipment";
 import { selectBank } from "./selectBank";
 
 /**
@@ -9,13 +7,9 @@ import { selectBank } from "./selectBank";
  */
 export const selectCharacter = createSelector(
   selectName,
-  selectSkills,
-  selectEquipment,
   selectBank,
-  (name, skills, equipment, bank) => ({
+  (name, bank) => ({
     name,
-    skills,
-    equipment,
     bank,
   }),
 );
