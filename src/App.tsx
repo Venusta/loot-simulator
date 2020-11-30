@@ -10,7 +10,7 @@ const testKill = (monster: Monster, amount: number) => itemMapToItemData(monster
 
 const App = (): JSX.Element => {
   const amount = 1000;
-  const { corporealBeast, commanderZilyana } = monsters;
+  const { corporealBeast, commanderZilyana, chicken } = monsters;
 
   return (
     <div className="App">
@@ -22,6 +22,11 @@ const App = (): JSX.Element => {
       <LootWindow
         bank={testKill(commanderZilyana, amount)}
         name={commanderZilyana.name}
+        kills={amount}
+      />
+      <LootWindow
+        bank={testKill(chicken, amount)}
+        name={chicken.name}
         kills={amount}
       />
     </div>
