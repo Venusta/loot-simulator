@@ -8,9 +8,11 @@ import { formatStackNumbers } from "../../util";
 
 interface BankProps {
   bank: ItemData[];
+  name: string;
+  kills: number;
 }
 
-export const LootWindow: React.FC<BankProps> = ({ bank }) => {
+export const LootWindow: React.FC<BankProps> = ({ bank, name, kills }) => {
   const renderItem = (itemID: number, { amount, colour }: { amount: string; colour: string }): JSX.Element => (
     <ItemInBank
       key={`bankItem-${uuid()}`}
@@ -33,7 +35,7 @@ export const LootWindow: React.FC<BankProps> = ({ bank }) => {
   return (
     <div className="bank-window">
       <div className="bank-title">
-        Kill data maybe
+        {`${kills}x ${name}`}
       </div>
       <div className="bank-inner">
         <div className="bank-wrapper">

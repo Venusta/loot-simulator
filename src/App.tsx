@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-
-import { ItemData } from "./types/types";
 
 import { monsters } from "./monsters";
 import { itemMapToItemData } from "./drop-simulator/DropSimulator";
 import { LootWindow } from "./components/loot-window/LootWindow";
+import { Monster } from "./model/Monster";
 
-const testKill = () => {
-  const { corporealBeast } = monsters;
-  const loot3 = corporealBeast.getLoot(1000);
-  return itemMapToItemData(loot3);
-};
+const testKill = (monster: Monster, amount: number) => itemMapToItemData(monster.getLoot(amount));
 
 const App = (): JSX.Element => {
-  const init: ItemData[] = [];
-  const [loot, setLoot] = useState(init);
-
-  useEffect(() => {
-    setLoot(testKill());
-  }, []);
+  const amount = 1000;
+  const { corporealBeast, commanderZilyana } = monsters;
 
   return (
     <div className="App">
-      <LootWindow bank={loot} />
+      <LootWindow
+        bank={testKill(corporealBeast, amount)}
+        name={corporealBeast.name}
+        kills={amount}
+      />
+      <LootWindow
+        bank={testKill(commanderZilyana, amount)}
+        name={commanderZilyana.name}
+        kills={amount}
+      />
     </div>
   );
 };
